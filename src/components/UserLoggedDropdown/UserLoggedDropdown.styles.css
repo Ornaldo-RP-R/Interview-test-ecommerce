@@ -1,0 +1,54 @@
+/*Dropdown positioning*/
+.dropdownSigned {
+  position: absolute;
+  top: 8vh;
+  right: 1%;
+  box-shadow: 1px 1px 2px 0.5px rgb(190, 184, 184);
+  padding: 2vh 1vw;
+  background-color: white;
+  width: 20vw;
+  height: 22vh;
+  border: 0.5px solid #2785ad;
+  border-radius: 0.5vw;
+  animation: mymove 1s;
+  z-index: 1;
+  cursor: pointer !important;
+}
+/*A fade effect to start loading slowly */
+@keyframes mymove {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*Styling buttons in user dropdown*/
+.SignedDropdownButtons {
+  background-color: transparent;
+  padding: 0.2vh 0.4vw;
+  margin-top: 0.8vh;
+  margin-bottom: 0.8vh;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+/*Styling specific button to add specific position and colors in user dropdown*/
+
+.SignedDropdownButtons.Logout {
+  position: absolute;
+  left: 66%;
+  top: 77%;
+  color: #2785ad;
+}
+.SignedDropdownButtons.Help {
+  position: absolute;
+  left: 2%;
+  top: 77%;
+  color: #bb2639;
+}
+.SignedDropdownButtons.normal {
+  padding-left: 2vw;
+}

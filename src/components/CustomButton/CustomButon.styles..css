@@ -1,0 +1,16 @@
+/*Creating ripple effect to the button and some hover effect*/
+.MyButton {
+	background-position: center;
+	transition: background 0.8s;
+}
+.MyButton:hover {
+	background: #ffffff radial-gradient(circle, transparent 1%, #ffffff 1%) center/15000%;
+	box-shadow: 0.6px 0.6px 0.4px 0.6px gray;
+	color: black;
+}
+
+.MyButton:active {
+	background-color: gray;
+	background-size: 100%;
+	transition: background 0s;
+}

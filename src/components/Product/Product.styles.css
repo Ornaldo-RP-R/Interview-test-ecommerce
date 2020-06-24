@@ -1,0 +1,107 @@
+/*Style button of each product (Add to Cart)*/
+.OrderNow {
+  border: none;
+  outline: none;
+  font-size: 1.4vw;
+  opacity: 0.9;
+  padding: 0.9vh 0.6vw;
+  border-radius: 6px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  box-shadow: 0.6px 0.6px 0.4px 0.6px white;
+}
+/*Styling face of each product*/
+.face {
+  position: absolute;
+  top: 0%;
+  padding: 1vh 1vw;
+  right: 0%;
+  width: 100%;
+  height: 83%;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+/*Styling date of each product*/
+
+.date {
+  position: absolute;
+  bottom: 1%;
+  right: 2%;
+  color: #68655f;
+  font-size: 1.4vw;
+}
+/*Styling price of each product*/
+
+.price {
+  position: absolute;
+  left: 2%;
+  bottom: 1%;
+  color: #4aa331;
+  font-size: 1.6vw;
+}
+/*Styling adds (just puting in a container ) of each product*/
+
+.advertisment {
+  position: relative;
+  width: 22vw;
+  height: 32vh;
+  display: flex;
+  right: 35vw;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vh;
+  padding: 1vh 1vw;
+}
+.advertisment img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/*Create template of each product i mean container and some styles*/
+.Each-Product {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16vw;
+  height: 29vh;
+  padding: 1vh 1vw;
+  /*When i want to make a style that attrackt user i usually use gradient background ,they
+    give a smother and better for human eye but if not hard style is preffered i can give it simple a color*/
+  background-image: radial-gradient(
+    circle 590px at 8.2% 13.8%,
+    rgb(162, 183, 216, 0.3) 0%,
+    rgb(255, 249, 249) 90%
+  );
+  margin-top: 2vh;
+  margin-right: 1vw;
+  margin-bottom: 1vw;
+  border-radius: 4px;
+  box-shadow: 0.4px 0.4px 6px 1px #8e959b;
+
+  cursor: pointer;
+}
+.Each-Product:hover {
+  transition: 0.2s;
+  box-shadow: 1.6px 1.6px 7px 1.6px #8e959b;
+}
+/*again medai query for some bugs*/
+@media only screen and (max-width: 630px) {
+  .Each-Product {
+    font-size: 1.2vw !important;
+    padding: 0;
+    height: 25vh;
+    width: 30vw;
+  }
+  .advertisment {
+    grid-template-areas: header;
+    height: 20vh;
+    width: 100%;
+  }
+  .face {
+    font-size: 1.8vw !important;
+  }
+}

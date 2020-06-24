@@ -1,0 +1,67 @@
+.PositionComponents {
+	display: flex;
+	flex-direction: column;
+}
+
+.SwitchView {
+	position: absolute;
+	top: 1%;
+	left: 15%;
+	font-size: 1.7vw;
+	font-weight: bold;
+	box-shadow: 1.5px 1.5px 0.7px 1.5px rgba(125, 140, 153, 0.1);
+
+	color: #413b3b;
+	padding: 0.6vh 2vw;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 3px;
+}
+.ShopCart {
+	position: absolute;
+	top: 0.3%;
+	right: 10%;
+	font-size: 1.7vw;
+	font-weight: bold;
+	box-shadow: 1.5px 1.5px 0.7px 1.5px rgba(125, 140, 153, 0.1);
+
+	color: #ffffff;
+	background-color: #bb2639;
+	padding: 1.4vh 1.4vw;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 14px;
+}
+.UserIcon {
+	position: absolute;
+	right: 5%;
+	top: 0.3%;
+	width: 2.7%;
+	height: 2.6%;
+	font-size: 1.8vw;
+	color: white;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	padding: 1% 0.4%;
+	align-items: center;
+	border-radius: 2vw;
+}
+@media only screen and (max-width: 600px) {
+	.UserIcon {
+		width: 3.4%;
+		font-size: 2vw;
+		height: 2.5%;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.UserIcon {
+		width: 3.4%;
+		font-size: 3.2vw;
+		height: 2.5%;
+	}
+}

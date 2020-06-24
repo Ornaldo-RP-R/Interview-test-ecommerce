@@ -1,0 +1,24 @@
+/*Costumize filtering button*/
+.Filtering {
+	font-size: 1.8vw;
+	box-shadow: 1.5px 1.5px 0.7px 1.5px rgba(125, 140, 153, 0.1);
+
+	color: #413b3b;
+	width: 8.3vw;
+	padding: 0.4vh 2vw;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 3px;
+}
+/*Costumize Soit Items Dropdown*/
+
+.SortOption {
+	position: absolute;
+	width: 12.2vw;
+	margin-top: 0.5vh;
+	box-shadow: 1.5px 1.5px 0.7px 1.5px gray;
+	background-color: white;
+	z-index: 1;
+}

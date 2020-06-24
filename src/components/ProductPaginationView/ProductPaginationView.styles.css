@@ -1,0 +1,17 @@
+/*Page Container*/
+.ShowPageProductsPagination {
+  display: flex;
+  flex-direction: column;
+}
+/*Ad container*/
+.adscontainer {
+  position: relative;
+  width: 90vw;
+  height: 13vh;
+  left: 3vw;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 1vh 1vw;
+  margin-top: 1vh;
+}

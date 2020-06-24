@@ -1,0 +1,211 @@
+/*In mostly css classes names are descriptive so i will not explain every class for pages file*/
+/*Anyway if you have any question or unsecurity that i have copy pasted or 
+dont know to explain we can talk everytime*/
+.CheckoutPage {
+  width: 90%;
+  margin-left: 5%;
+  display: grid;
+  height: 90vh;
+  margin-top: 3vh;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2vw;
+  overflow-y: scroll;
+  font-size: 1.3vw;
+  border-radius: 5px;
+}
+.CheckoutPage::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+.CheckoutPage:hover::-webkit-scrollbar-thumb {
+  background-color: #1c61c2;
+  outline: none;
+  border-radius: 35px;
+}
+.CheckoutPageItem {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92%;
+  background-color: white;
+  height: 26vh;
+  padding: 1vh 1vw;
+  margin-bottom: 2vh;
+  margin-top: 2px;
+  margin-left: 2px;
+
+  box-sizing: border-box;
+  box-shadow: 0.2px 0.2px 3px 0.2px #1c61c2;
+}
+.CheckoutPageface {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  box-sizing: border-box;
+  height: 70%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.2px 0.2px 3px 0.2px gray;
+  font-weight: bold;
+}
+.CheckoutPageValue {
+  position: absolute;
+  right: 10%;
+  top: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30%;
+  width: 20%;
+  color: #1c61c2;
+  font-weight: bold;
+}
+.CheckoutPageArrows {
+  color: black;
+  background-color: #e5dddd;
+  padding: 1.2vh 1vw;
+  border-radius: 2.1vw;
+  cursor: pointer;
+}
+.CheckoutPagePrice {
+  position: absolute;
+  left: 51%;
+  top: 25%;
+  box-sizing: border-box;
+  height: 15%;
+  min-width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.CheckoutPageX {
+  position: absolute;
+  font-weight: bold;
+  color: #1c61c2;
+  padding: 1vh 1vw;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+}
+.CheckoutPageEmptyMessage {
+  font-size: 1.3vw;
+  color: crimson;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.CheckoutPageTotal {
+  font-size: 1.3vw;
+  font-weight: bold;
+}
+.CheckoutPageBuyNow {
+}
+.BuyNowButtonCheckoutPage {
+  border: none;
+  outline: none;
+  padding: 1.7vh 2vw;
+  font-size: 1.3vw;
+  color: white;
+  background-color: #1c61c2;
+  border-radius: 10px;
+  box-shadow: 0.2px 0.2px 0.8px 0.2px black;
+  cursor: pointer;
+  margin: 1vh 3vw;
+}
+.CheckoutPageTotalBuyNow {
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  height: 10vh;
+  justify-content: flex-end;
+  align-items: center;
+}
+.CheckoutHeadMessage {
+  position: relative;
+  font-size: 1.6vw;
+  color: #1c61c2;
+  font-weight: bold;
+  width: 20vw;
+  margin-left: 25vw;
+}
+.CheckoutBackToHome {
+  position: relative;
+  width: 20vw;
+  margin-left: 1vw;
+  font-size: 1.6vw;
+  color: #1c61c2;
+  font-weight: bold;
+}
+.HeaderMessagePosition {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 5%;
+  align-items: center;
+}
+.CheckMarkBox {
+  color: green;
+}
+.CheckOption {
+  border-radius: 3.5px;
+  position: absolute;
+  padding: 0.2vh 0.1vw;
+  cursor: pointer;
+  left: 1.2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 30%;
+  width: 4%;
+  height: 10%;
+  box-shadow: 0.3px 0.3px 3px 0.3px gray;
+}
+.CheckUncheckAllBox {
+  padding: 0.2vh 0.1vw;
+  width: 2.5vw;
+  height: 3.5vh;
+  box-shadow: 0.3px 0.3px 3px 0.3px gray;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CheckUncheckAll {
+  font-size: 1.3vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CheckUncheckAllPosition {
+  position: relative;
+  left: 75vw;
+  margin-top: 3.5vh;
+  cursor: pointer;
+  width: 12vw;
+  height: 3.5vh;
+}
+@media only screen and (max-width: 600px) {
+  .CheckoutPagePrice {
+    left: 53%;
+  }
+  .CheckOption {
+    width: 7%;
+  }
+  .CheckoutPage {
+    font-size: 1.8vw !important;
+  }
+}

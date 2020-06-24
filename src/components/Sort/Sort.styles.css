@@ -1,0 +1,21 @@
+/*Some styles about sortup/sortdown positioning and some styled about component just positioning */
+.Sort-Component {
+  display: flex;
+  position: relative;
+  padding: 0.3vh 0.3vw;
+  width: 5vw;
+  font-size: 1.3vw;
+  cursor: pointer;
+  margin-left: 2vw;
+  margin-top: 0.3vh;
+}
+.sortdown {
+  position: absolute;
+  top: -10%;
+  right: 0;
+}
+.sortup {
+  position: absolute;
+  top: 10%;
+  right: 0;
+}

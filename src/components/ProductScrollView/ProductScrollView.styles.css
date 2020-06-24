@@ -1,0 +1,39 @@
+/*Displaying products as grid*/
+.Products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 90vw;
+  height: 89vh;
+  margin-top: 3vh;
+  margin-left: 5vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/*Grid scrollbar style*/
+.Products::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+.Products:hover::-webkit-scrollbar-thumb {
+  background-color: black;
+  outline: none;
+  border-radius: 35px;
+}
+/*Some styles about loading more or end of catalogue*/
+.LoadingMoreend {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  color: #6b6565;
+  width: 100%;
+  font-size: 2vw;
+}
+/*Using media querry for better experience exmaple if u are in phone or screens
+ below 600px grid would be 2 items per row*/
+@media only screen and (max-width: 600px) {
+  .Products {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}

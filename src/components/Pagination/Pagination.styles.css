@@ -1,0 +1,115 @@
+/*Pagination component postion container style*/
+.pagination {
+	display: flex;
+	font-size: 1.5vw;
+	width: 99vw;
+}
+/*Pagination child(pages or arrows in this case) adding some  styles*/
+.Paginationpages {
+	width: 3.1vw;
+	height: 6vh;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	box-sizing: border-box;
+	margin: 0.5vh 0.5vw;
+	padding: 1.3vh 0.9vw;
+
+	cursor: pointer;
+	border-radius: 40px;
+}
+/*Pagination numbers (pages) style and some hover effect or focus(if they are clicked not focus as a pseudo element)*/
+.Paginationpages.Numbers {
+	box-shadow: 1px 1px 1px 1px gray;
+}
+.Paginationpages.Numbers:hover {
+	background-color: #bb2639;
+	color: white;
+	box-shadow: 0.7px 0.7px 0.7px 0.7px #ff7300;
+}
+.Paginationpages.Numbers.Clicked {
+	background-color: #bb2639;
+	color: white;
+	box-shadow: 0.7px 0.7px 0.7px 0.7px #ff7300;
+}
+/*Style points when some pages are not displayed*/
+.Paginationpages.Points {
+	margin: 0;
+	padding: 0;
+	margin-top: 1vh;
+	padding-top: 1.8vh;
+	cursor: default;
+}
+/*Style Symbols (arrows)*/
+.Paginationpages.Symbols {
+	margin: 0.5vh 0;
+	padding: 1.3vh 0;
+	font-weight: bold;
+	font-size: 1.6vw;
+}
+/*extra style for lite arrows single arrows '>/<' those which increment or decrement by one*/
+.Paginationpages.Symbols.Lite {
+	margin: 0.7vh 0;
+}
+/*I usually use media screen to fix my tiny errors to make 100% responsive website And 
+ i will not explain them line per line,as i said i use to see if any class get bugged in any aspect ratio*/
+@media only screen and (max-width: 950px) {
+	.pagination {
+		width: 95vw;
+		margin-top: 1.5vh;
+	}
+	.Paginationpages {
+		width: 2.8vw !important;
+		height: 4vh !important;
+		margin: 0.3vh 0.3vw;
+		padding: 0.8vh 0.6vw;
+		border-radius: 28px;
+	}
+
+	.Paginationpages.Points {
+		margin: 0;
+		padding: 0;
+		margin-top: 0.6vh;
+		padding-top: 1vh;
+		cursor: default;
+	}
+	.Paginationpages.Symbols {
+		margin: 0.4vh 0;
+		padding: 0.6vh 0;
+		font-weight: bold;
+		font-size: 1.6vw;
+	}
+	.Paginationpages.Symbols.Lite {
+		margin: 0.5vh 0;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.pagination {
+		width: 95vw;
+		margin-top: 1vh;
+		font-size: 1.8vw !important;
+	}
+	.Paginationpages {
+		width: 3vw !important;
+		height: 3vh !important;
+		margin: 0.3vh 0.3vw;
+		padding: 0.6vh 0.5vw;
+		border-radius: 2vw;
+		box-sizing: border-box;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.pagination {
+		width: 95vw;
+		margin-top: 1vh;
+		font-size: 1.9vw !important;
+	}
+	.Paginationpages {
+		width: 3vw !important;
+		height: 2.2vh !important;
+		margin: 0.3vh 0.3vw;
+		padding: 0.6vh 0.5vw;
+		border-radius: 2vw;
+		box-sizing: border-box;
+	}
+}

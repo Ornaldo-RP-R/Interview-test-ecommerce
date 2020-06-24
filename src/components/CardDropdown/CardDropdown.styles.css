@@ -1,0 +1,160 @@
+/*IMPORTANT*/
+/* About Styles i wont explain every property unless it looks me a new and hard logic i 
+mean no explanation for simple one like color or background-color is useless and waste of time 
+i will explain just classes and why i have used them
+*/
+/*I like to use a lot vw and vh for giving a responive web site*/
+/*I like to use a lot display:flex for positioning a content in center and to position some container
+ betwen same space (for positioning container that share same space grid would be fine too )*/
+/*Usually i use palette of colors i mean exactly uniform (variables) in root in order to make use of them and dont use multiple
+ havent used in this project since were not a big one and not much colors on it
+ */
+/*I like to use simple colors not colorfull or hard designs(if it is not a requirement by owner)*/
+/*Other properties are colors font size border boxshadow some base styling that makes look simple and wonderful*/
+/*Thats i prefer but if i had requirement i can adapt and create mostly all ,also fast learning and good searcher if is needed*/
+
+/* styling cart-item every item buyed or saved by user in dropdown*/
+.cart-item {
+  width: 99%;
+  display: flex;
+  height: 15vh;
+  margin-bottom: 1vh;
+}
+/* styling price of every item buyed or saved by user in dropdown*/
+
+.CardPrice {
+  right: 7%;
+  font-size: 1.2vw;
+  width: 40%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+/* item details is inside part of cart-item cart-item is used mostly for a container*/
+.cart-item .item-details {
+  position: relative;
+  width: 80%;
+  height: 10vh;
+  margin-left: 0.1vw;
+  margin-top: 1.3vh;
+  margin-right: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.2vh 1.4vw;
+  box-shadow: 0.1px 0.1px 2px 0.1px gray;
+}
+/* styling face of every item buyed or saved by user in dropdown*/
+
+.cart-item .item-details .Cardface {
+  left: 1%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 48%;
+  position: absolute;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+/*Styling and positioning dropdown*/
+.cart-dropdown {
+  position: absolute;
+  width: 17.5vw;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  padding: 3vh 1.3vw;
+  box-shadow: 0.3px 0.3px 4px 0.3px black;
+  border-radius: 4px;
+  background-color: white;
+  top: 8vh;
+  right: 10vw;
+  z-index: 1;
+}
+/*Styling and message  that is shown if no order or no saved item*/
+
+.cart-dropdown .empty-message {
+  font-size: 1.4vw;
+  margin: 15vh auto;
+  color: #bb2639;
+}
+/*cart-items contain all cart-item used styling to position and give it a form*/
+.cart-dropdown .cart-items {
+  margin-top: 4%;
+  height: 76%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/*I like to style scrollbar(97-105) usally that chrome scrollbar is a bit disgusting if you use them in small containers i want to make simple things and thin*/
+.cart-items::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+.cart-items:hover::-webkit-scrollbar-thumb {
+  background-color: black;
+  outline: none;
+  border-radius: 35px;
+}
+/*Checkout Button styling*/
+.CardDropdownCheckout {
+  position: relative;
+  top: 2vh;
+  margin-top: 4vh;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.5vw;
+  color: white;
+  background-color: #bb2639;
+  padding: 1.2vh 1.2vw;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+}
+/*X Button for item delete styling*/
+
+.CartDropdownX {
+  position: absolute;
+  top: 40%;
+  right: -6.5%;
+  font-size: 1.2vw;
+  width: 5%;
+  height: 20%;
+  color: crimson;
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+/*Style arrows for increment and decrement value of item*/
+.CardDropdownArrows {
+  color: #bb2639;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.6vw;
+}
+/*Use medai querry for fixing some small bugs for better look  
+IMPORTANT if i have more time or have big project i see more in depth and more in detail to make fully responsive
+*/
+@media only screen and (max-width: 800px) {
+  .cart-dropdown {
+    width: 20vw;
+    height: 45vh;
+    font-size: 1.7vw !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .cart-dropdown {
+    width: 32vw;
+    height: 38vh;
+    font-size: 2vw !important;
+  }
+}
