@@ -142,10 +142,13 @@ const ProductScrollView = ({
       pagination while here by checking when user scroll in bottom i add a loading and continue displaying
        or if all products displayed end of catalogue
       */}
-      {LoadingMore === true ? (
+      {LoadingMore === true && SpinnerVissibility === false ? (
         <div className="LoadingMoreend">Loading ...</div>
       ) : null}
-      {Index !== 0 && Index === DisplayedProductsArray.length ? (
+      {Index !== 0 &&
+      Index === DisplayedProductsArray.length &&
+      Index === ProductsFullArray.length &&
+      SpinnerVissibility === false ? (
         <div className="LoadingMoreend">end of catalogue</div>
       ) : null}
     </div>
