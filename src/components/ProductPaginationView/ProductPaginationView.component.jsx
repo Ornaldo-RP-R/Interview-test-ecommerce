@@ -6,6 +6,7 @@ import Pagination from "../Pagination/Pagination.component";
 import { toggleSpinner } from "../../redux/Spinner/Spinner.actions";
 import Spinner from "../Spinner/spinner.component";
 import { setValueByNameCart } from "../../redux/Cart/Cart.actions";
+import Swal from "sweetalert2";
 
 import {
   setDisplayedArrayOfProducts,
@@ -84,12 +85,20 @@ const getProductsNedded = async (
     _page: clickedPage,
     _limit: 20,
     _sort: SortBy,
-  }).then((response) => {
-    setValueByName({
-      name: "PaginationDisplayedArrayOfProducts",
-      value: response.data,
+  })
+    .then((response) => {
+      setValueByName({
+        name: "PaginationDisplayedArrayOfProducts",
+        value: response.data,
+      });
+    })
+    .catch((error) => {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong please contact Administrator",
+      });
     });
-  });
   toggleSpinner();
 };
 //Check last index of array before to display an add

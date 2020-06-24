@@ -41,6 +41,10 @@ I fully understand you want to see my level of coding(js and css)/That s why i d
 
 -One think out of requirement ,and i am sorry about that just i didnt read before project becouse its title was what should i do when i finish project.I usually make git regular commit but in this one i just commited at the end havent done regular commits.
 
+# Api Catch Errors
+
+-I usually can come with my error templates or api message or handling response but for most common cases i prefer to use sweetalert to show a message
+
 Thank you and Hope to hear from you soon
 
 # Ornaldo

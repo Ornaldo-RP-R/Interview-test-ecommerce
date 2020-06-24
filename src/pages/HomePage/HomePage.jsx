@@ -3,6 +3,8 @@ import "./HomePage.css";
 import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
+import Swal from "sweetalert2";
+
 import {
   setFullArrayOfProducts,
   setDisplayedArrayOfProducts,
@@ -37,19 +39,35 @@ class HomePage extends React.Component {
     await getData(ContrFunc.Functions.products, toggleSpinner, {
       _pages: 1,
       _limit: 80,
-    }).then((response) => {
-      //register  80 products to redux (80 becouse no need more for start and load faster)
-      setFullArrayOfProducts(response.data);
-      // register products that we need to display to the user
-      setDisplayedArrayOfProducts(response.data.slice(0, 20));
-      //set Index to redux a variable that i use to keep truck of the product number shown to user
-      setValueByName({ name: "Index", value: 20 });
-    });
+    })
+      .then((response) => {
+        //register  80 products to redux (80 becouse no need more for start and load faster)
+        setFullArrayOfProducts(response.data);
+        // register products that we need to display to the user
+        setDisplayedArrayOfProducts(response.data.slice(0, 20));
+        //set Index to redux a variable that i use to keep truck of the product number shown to user
+        setValueByName({ name: "Index", value: 20 });
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong please contact Administrator",
+        });
+      });
     await toggleSpinner();
     // while user uses the pages full products will be registered not only (80)
-    await getData(ContrFunc.Functions.products, null, null).then((response) => {
-      setFullArrayOfProducts(response.data);
-    });
+    await getData(ContrFunc.Functions.products, null, null)
+      .then((response) => {
+        setFullArrayOfProducts(response.data);
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong please contact Administrator",
+        });
+      });
   };
   componentDidMount() {
     this.props.setValueByName({ name: "Index", value: 0 });

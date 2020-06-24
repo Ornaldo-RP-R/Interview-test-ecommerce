@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Filter.styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import Swal from "sweetalert2";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import Sort from "../Sort/Sort.component";
 
@@ -39,26 +39,42 @@ const Filter = ({
     await getData(ContrFunc.Functions.products, toggleSpinner, {
       _sort: ItemToSort,
       _limit: 80,
-    }).then((response) => {
-      //i assign this to my arrays in redux
-      //full data on FullArrayofProduct
-      setFullArrayOfProducts(response.data);
-      //20 products on DisplayedArrayOfProducts becouse i display only 20 before scrolling or each page
-      setDisplayedArrayOfProducts(response.data.slice(0, 20));
-      //I keep track of index to show more items
-      setValueByName({ name: "Index", value: 20 });
-      //And to be sure i make LoadingMore false i use it on scrolling
-      setValueByName({ name: "LoadingMore", value: false });
-    });
+    })
+      .then((response) => {
+        //i assign this to my arrays in redux
+        //full data on FullArrayofProduct
+        setFullArrayOfProducts(response.data);
+        //20 products on DisplayedArrayOfProducts becouse i display only 20 before scrolling or each page
+        setDisplayedArrayOfProducts(response.data.slice(0, 20));
+        //I keep track of index to show more items
+        setValueByName({ name: "Index", value: 20 });
+        //And to be sure i make LoadingMore false i use it on scrolling
+        setValueByName({ name: "LoadingMore", value: false });
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong please contact Administrator",
+        });
+      });
     //After i get data and register on redux i toggleSpinner (stop initiated Spinner by getData my helper function)
     await toggleSpinner();
     //then without using spinner i load all products that may come some second
     // later and register them on FullArrayProduct in redux(user wont understand it becouse no spinner )
     await getData(ContrFunc.Functions.products, null, {
       _sort: ItemToSort,
-    }).then((response) => {
-      setFullArrayOfProducts(response.data);
-    });
+    })
+      .then((response) => {
+        setFullArrayOfProducts(response.data);
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong please contact Administrator",
+        });
+      });
   };
   return (
     <div>
