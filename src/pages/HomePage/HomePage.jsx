@@ -27,12 +27,12 @@ class HomePage extends React.Component {
   //Make Api call and get Products Info
   GetProducts = async () => {
     //destructuring props
-    const [
+    const {
       toggleSpinner,
       setFullArrayOfProducts,
       setDisplayedArrayOfProducts,
       setValueByName,
-    ] = this.props;
+    } = this.props;
     //start Api call
     await getData(ContrFunc.Functions.products, toggleSpinner, {
       _pages: 1,
