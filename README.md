@@ -1,7 +1,12 @@
 Hello,
--How do i start the app?
-By using npm start it will run project(server on port 5000 and react in port 3000 automatically)
--Why is my code clean and readable?
+
+# How do i start the app?
+
+Firstly use 'npm install' to install pacages then
+By using 'npm start' it will run project(server on port 5000 and react in port 3000 automatically)
+
+# Why is my code clean and readable?
+
 First of all for this project i have used every part with a comment to let you know that what i have done is
 100% mine not cpyied ,not by any friend or anything else.
 Secondly i use structure in every project as you may see :
@@ -18,12 +23,24 @@ i havent used in this project becouse is easy taking acess by just accesing by e
 )
 )
 And other folders or files needed like for ex:photos/videos/App.js/App.css/Index.js/Index.css
--About reaching objective or full your request?
+
+# About reaching objective or full your request?
+
 As far as i understand i have done mostly all requirement ,anyway for each project or web (mostly frontend) it is not just coding but even your design has importance on scoring and making you in a good level
--About design?
+
+# About design?
+
 I have used simple elegant design fully responsive with not a lot of colours.
 And something always ecommerce are well designed and looking good becouse of photos with ascii i could not give a great look,Images attract the user.
--I refered your request and have used low tools or plugins ?And why is that?
+
+# I refered your request and have used low tools or plugins ?And why is that?
+
 I fully understand you want to see my level of coding(js and css)/That s why i didnt use library like(Material Ui or Bootstrap) I did it by myself.Why used font-Awesome(i like it becouse using images makes page loads slowly and they give you exact icons with your preferences )
+
+# About git
+
+-One think out of requirement ,and i am sorry about that just i didnt read before project becouse its title was what should i do when i finish project.I usually make git regular commit but in this one i just commited at the end havent done regular commits.
+
 Thank you and Hope to hear from you soon
+
 # Ornaldo
