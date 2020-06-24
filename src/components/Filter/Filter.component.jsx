@@ -35,6 +35,10 @@ const Filter = ({
       name: "Index",
       value: 0,
     });
+    await setValueByName({
+      name: "LoadingMore",
+      value: false,
+    });
     //Get 80 products (i have used this method for performance) so user fast get some result that he firstly need
     await getData(ContrFunc.Functions.products, toggleSpinner, {
       _sort: ItemToSort,
@@ -46,6 +50,8 @@ const Filter = ({
         setFullArrayOfProducts(response.data);
         //20 products on DisplayedArrayOfProducts becouse i display only 20 before scrolling or each page
         setDisplayedArrayOfProducts(response.data.slice(0, 20));
+        //and put clickedpage to 1 if we are at pagination
+        setValueByName({ name: "clickedPage", value: 1 });
         //I keep track of index to show more items
         setValueByName({ name: "Index", value: 20 });
         //And to be sure i make LoadingMore false i use it on scrolling

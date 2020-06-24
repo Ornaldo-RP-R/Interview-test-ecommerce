@@ -145,7 +145,7 @@ const ProductScrollView = ({
       {LoadingMore === true ? (
         <div className="LoadingMoreend">Loading ...</div>
       ) : null}
-      {Index !== 0 && Index === ProductsFullArray.length ? (
+      {Index !== 0 && Index === DisplayedProductsArray.length ? (
         <div className="LoadingMoreend">end of catalogue</div>
       ) : null}
     </div>

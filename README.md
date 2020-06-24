@@ -43,7 +43,12 @@ I fully understand you want to see my level of coding(js and css)/That s why i d
 
 # Api Catch Errors
 
--I usually can come with my error templates or api message or handling response but for most common cases i prefer to use sweetalert to show a message
+-I usually can come with my error templates or api message or handling response but for simple project i just use a message ,becouse even user does not have to know full detail of error (in my project cases i have use backend api message but i can handle reponse codes too)
+
+# Ads
+
+I want to show you and a bug part there are some r indexes in ads api that have same images that is not my foult if a user see twice in a row same image ,i have just found different indexes(r):example:(r=418 & r=78)
+I have not manage part of loading or if no internet ,i have put directly your api at ad src, would be better if i had an api that would return me a link then redirect me to link as it is ,anyway if i would spend some more times i could find anything by playing with onLoad function.
 
 Thank you and Hope to hear from you soon
 
